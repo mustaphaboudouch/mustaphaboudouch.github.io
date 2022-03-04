@@ -1,0 +1,305 @@
+:root {
+	--main-color: #4fa968;
+	--dark-color: #1a1a1a;
+
+	--open-width: 300px;
+	--close-width: 90px;
+}
+
+body {
+	background-color: rgb(241, 245, 249) !important;
+}
+
+/**********************************
+ ** Sidebar
+ **********************************
+ - Logo
+ - Menu
+ - Footer
+ **********************************/
+
+.sidebar {
+	flex: none;
+	width: 90px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow-y: hidden;
+	transition: width 0.3s;
+	background-color: #1a1a1a; /**/
+}
+
+/**********************************
+ ** Logo
+ **********************************/
+
+.sidebar__logo {
+	flex: none;
+	width: 100%;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	padding: 0 25px;
+}
+
+.sidebar__logo img {
+	flex: none;
+	height: 45px;
+}
+
+.sidebar__logo img:last-child {
+	flex: none;
+	margin-left: 10px;
+	opacity: 0;
+	visibility: hidden;
+	transition: none;
+}
+
+/**********************************
+ ** Menu
+ **********************************/
+
+.sidebar__menu {
+	flex: 1;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding: 20px;
+}
+
+.sidebar__menu .link {
+	position: relative;
+	display: flex;
+	align-items: center;
+	height: 50px;
+	background-color: #222222;
+	border-radius: 10px;
+}
+.sidebar__menu .link:not(:last-child) {
+	margin-bottom: 10px;
+}
+.sidebar__menu .link:hover {
+	background-color: #4fa968;
+}
+.sidebar__menu .link.active {
+	background-color: #4fa968;
+}
+.sidebar__menu .link.active::before {
+	content: '';
+	position: absolute;
+	left: -20px;
+	width: 5px;
+	height: 40px;
+	border-radius: 2.5px;
+	background-color: #4fa968;
+}
+
+.sidebar__menu .link .link__icon {
+	flex: none;
+	font-size: 20px;
+	line-height: 50px;
+	vertical-align: baseline;
+	width: 50px;
+	text-align: center;
+	color: #ffffff;
+}
+
+.sidebar__menu .link .link__label {
+	font-size: 0.9rem;
+	white-space: nowrap;
+	color: #ffffff;
+	opacity: 0;
+	visibility: hidden;
+	transition: none;
+}
+
+/**********************************
+ ** User
+ **********************************/
+
+.sidebar__user {
+	flex: none;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	padding: 15px 20px;
+	background-color: #222222;
+}
+
+.sidebar__user:hover {
+	background-color: #4fa968;
+}
+
+.sidebar__user .avatar {
+	width: 50px;
+	height: 50px;
+	object-fit: cover;
+	border-radius: 10px;
+}
+
+.sidebar__user .infos {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-left: 15px;
+	color: #ffffff;
+	transition: all 0.5s;
+}
+
+.sidebar__user .infos .name {
+	line-height: 1;
+	margin-bottom: 6px;
+	white-space: nowrap;
+}
+
+.sidebar__user .infos .role {
+	font-size: 0.85rem;
+	line-height: 1;
+	white-space: nowrap;
+	color: rgba(255, 255, 255, 0.6);
+}
+
+.sidebar__user .icon {
+	font-size: 30px;
+	color: #ffffff;
+}
+
+/**********************************
+ ** Sidebar (open)
+ **********************************/
+
+.sidebar.open {
+	width: 300px;
+}
+
+/* Logo */
+
+.sidebar.open .sidebar__logo img:last-child {
+	opacity: 1;
+	visibility: visible;
+	transition: all 0.5s;
+}
+
+/* Menu */
+
+.sidebar.open .sidebar__menu .link .link__label {
+	opacity: 1;
+	visibility: visible;
+	transition: all 0.5s;
+}
+
+/* Toggler */
+
+.sidebar.open .toggler i {
+	transform: rotate(0deg);
+}
+
+/**********************************
+ ** Main
+ **********************************
+ - Navbar
+ - Content
+ **********************************/
+
+.main {
+	flex: 1;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+/**********************************
+ ** Toggler
+ **********************************/
+
+.toggler {
+	height: 70px;
+	font-size: 28px;
+	color: #ffffff;
+	background-color: #222222;
+}
+
+.toggler i {
+	opacity: 0.8;
+	transform: rotate(180deg);
+	transition: transform 0.3s;
+}
+
+/**********************************
+ ** Content
+ **********************************/
+
+.main__content {
+	flex: 1;
+	overflow-y: auto;
+}
+
+/*****************/
+
+.table-responsive {
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+.table {
+	width: 100%;
+	background-color: #ffffff;
+	overflow: hidden;
+}
+.table thead {
+	background-color: #f9fafb;
+	border-bottom: 1px solid #e5e7eb;
+}
+.table thead th {
+	text-align: left;
+	text-transform: uppercase;
+	font-size: 0.75rem;
+	font-weight: 500;
+	line-height: 1rem;
+	letter-spacing: 0.025em;
+	color: #6b7280;
+	padding: 0.75rem 1.5rem;
+	white-space: nowrap;
+}
+.table tbody tr {
+	border-bottom: 1px solid #e5e7eb;
+}
+.table tbody td {
+	padding: 1rem 1.5rem;
+	font-size: 0.875rem;
+	white-space: nowrap;
+}
+.table tbody td.actions {
+	text-align: right;
+}
+
+/******************/
+
+.user {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+.user .avatar {
+	width: 3rem;
+	height: 3rem;
+	object-fit: cover;
+	border-radius: 100%;
+}
+.user .infos {
+	display: flex;
+	flex-direction: column;
+}
+.user .infos .name {
+	font-size: 0.875rem;
+	font-weight: 500;
+}
+.user .infos .email {
+	font-size: 0.875rem;
+	color: #64748b;
+}
+
+body {
+	background-color: #f1f5f9;
+}

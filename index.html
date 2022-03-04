@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=$, initial-scale=1.0" />
+		<title>Design System</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link rel="stylesheet" href="./dist/style.css" />
+		<link rel="stylesheet" href="./dist/main.css" />
+		<link
+			href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+		<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+		<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+	</head>
+	<body>
+		<div class="w-screen h-screen flex overflow-hidden">
+			<!-- Sidebar -->
+			<div class="sidebar">
+				<!-- Logo -->
+				<div class="sidebar__logo">
+					<img src="./images/logo-vector.png" />
+					<img src="./images/logo-text.png" />
+				</div>
+				<!-- Menu -->
+				<div class="sidebar__menu">
+					<a class="link active" href="#" data-tippy-content="Dashboard">
+						<i class="bx bx-pie-chart-alt-2 link__icon"></i>
+						<span class="link__label">Dashboard</span>
+					</a>
+					<a class="link" href="#" data-tippy-content="Employés">
+						<i class="bx bx-user link__icon"></i>
+						<span class="link__label">Employés</span>
+					</a>
+					<a class="link" href="#" data-tippy-content="Fournisseurs">
+						<i class="bx bx-user link__icon"></i>
+						<span class="link__label">Fournisseurs</span>
+					</a>
+					<a class="link" href="#" data-tippy-content="Chantiers">
+						<i class="bx bx-buildings link__icon"></i>
+						<span class="link__label">Chantiers</span>
+					</a>
+					<a class="link" href="#" data-tippy-content="Bons de commande">
+						<i class="bx bx-cart-alt link__icon"></i>
+						<span class="link__label">Bons de commande</span>
+					</a>
+					<a class="link" href="#" data-tippy-content="Dépenses salariés">
+						<i class="bx bx-wallet link__icon"></i>
+						<span class="link__label">Dépenses salariés</span>
+					</a>
+				</div>
+				<!-- Sidebar -->
+				<button class="toggler">
+					<i class="bx bxs-chevrons-right"></i>
+				</button>
+			</div>
+			<!-- Main -->
+			<div class="main">
+				<!-- Content -->
+				<div class="main__content">
+					<!-- Header -->
+
+					<header class="header" style="margin: 1.5rem 0">
+						<div>
+							<ul class="breadcrumb">
+								<li class="breadcrumb-item">
+									<a href="#">Home</a>
+								</li>
+								<li class="breadcrumb-item">
+									<a href="#">Page</a>
+								</li>
+								<li class="breadcrumb-item">
+									<span>Employés</span>
+								</li>
+							</ul>
+							<h1 class="title">Employés</h1>
+						</div>
+						<button class="btn btn-primary">
+							<i class="bx bx-plus"></i>
+							<span>Ajouter un employé</span>
+						</button>
+					</header>
+
+					<!-- Table -->
+
+					<div class="table-responsive">
+						<table class="table">
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>Téléphone</th>
+									<th>Poste</th>
+									<th>État</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<div class="user">
+											<img
+												class="avatar"
+												src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60"
+												alt="..."
+											/>
+											<div class="infos">
+												<span class="name">Jane Cooper</span>
+												<span class="email">jane.cooper@example.com</span>
+											</div>
+										</div>
+									</td>
+									<td>(541) 754-3010</td>
+									<td>Regional Paradigm Technician</td>
+									<td>
+										<span class="badge badge-success">Active</span>
+									</td>
+									<td class="actions">
+										<div class="btn-group">
+											<button
+												class="btn btn-sm btn-light btn-icon"
+												data-tippy-content="Consulter"
+												id="show"
+											>
+												<i class="bx bx-link-external"></i>
+											</button>
+											<button
+												class="btn btn-sm btn-light btn-icon"
+												data-tippy-content="Modifier"
+											>
+												<i class="bx bx-edit-alt"></i>
+											</button>
+											<button
+												class="btn btn-sm btn-light btn-icon"
+												data-tippy-content="Supprimer"
+												id="delete"
+											>
+												<i class="bx bx-trash"></i>
+											</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="user">
+											<img
+												class="avatar"
+												src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60"
+												alt="..."
+											/>
+											<div class="infos">
+												<span class="name">Cody Fisher</span>
+												<span class="email">cody.fisher@example.com</span>
+											</div>
+										</div>
+									</td>
+									<td>(541) 754-3010</td>
+									<td>Product Directives Officer</td>
+									<td>
+										<span class="badge badge-danger">Inactive</span>
+									</td>
+									<td class="actions">
+										<div class="btn-group">
+											<button
+												class="btn btn-sm btn-light btn-icon"
+												data-tippy-content="Consulter"
+												id="show"
+											>
+												<i class="bx bx-link-external"></i>
+											</button>
+											<button
+												class="btn btn-sm btn-light btn-icon"
+												data-tippy-content="Modifier"
+											>
+												<i class="bx bx-edit-alt"></i>
+											</button>
+											<button
+												class="btn btn-sm btn-light btn-icon"
+												data-tippy-content="Supprimer"
+												id="delete"
+											>
+												<i class="bx bx-trash"></i>
+											</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="user">
+											<img
+												class="avatar"
+												src="https://images.unsplash.com/photo-1498551172505-8ee7ad69f235?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60"
+												alt="..."
+											/>
+											<div class="infos">
+												<span class="name">Jenny Wilson</span>
+												<span class="email">jenny.wilson@example.com</span>
+											</div>
+										</div>
+									</td>
+									<td>(541) 754-3010</td>
+									<td>Internal Applications Engineer</td>
+									<td>
+										<span class="badge badge-success">Active</span>
+									</td>
+									<td class="actions">
+										<div class="btn-group">
+											<button
+												class="btn btn-sm btn-light btn-icon"
+												data-tippy-content="Consulter"
+												id="show"
+											>
+												<i class="bx bx-link-external"></i>
+											</button>
+											<button
+												class="btn btn-sm btn-light btn-icon"
+												data-tippy-content="Modifier"
+											>
+												<i class="bx bx-edit-alt"></i>
+											</button>
+											<button
+												class="btn btn-sm btn-light btn-icon"
+												data-tippy-content="Supprimer"
+												id="delete"
+											>
+												<i class="bx bx-trash"></i>
+											</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="user">
+											<img
+												class="avatar"
+												src="https://images.unsplash.com/photo-1532417344469-368f9ae6d187?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60"
+												alt="..."
+											/>
+											<div class="infos">
+												<span class="name">Kristin Watson</span>
+												<span class="email">kristin.watson@example.com</span>
+											</div>
+										</div>
+									</td>
+									<td>(541) 754-3010</td>
+									<td>Product Directives Officer</td>
+									<td>
+										<span class="badge badge-success">Active</span>
+									</td>
+									<td class="actions">
+										<div class="btn-group">
+											<button
+												class="btn btn-sm btn-light btn-icon"
+												data-tippy-content="Consulter"
+												id="show"
+											>
+												<i class="bx bx-link-external"></i>
+											</button>
+											<button
+												class="btn btn-sm btn-light btn-icon"
+												data-tippy-content="Modifier"
+											>
+												<i class="bx bx-edit-alt"></i>
+											</button>
+											<button
+												class="btn btn-sm btn-light btn-icon"
+												data-tippy-content="Supprimer"
+												id="delete"
+											>
+												<i class="bx bx-trash"></i>
+											</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="user">
+											<img
+												class="avatar"
+												src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60"
+												alt="..."
+											/>
+											<div class="infos">
+												<span class="name">Cameron Williamson</span>
+												<span class="email"
+													>cameron.williamson@example.com</span
+												>
+											</div>
+										</div>
+									</td>
+									<td>(541) 754-3010</td>
+									<td>Forward Response Developer</td>
+									<td>
+										<span class="badge badge-success">Active</span>
+									</td>
+									<td class="actions">
+										<div class="btn-group">
+											<button
+												class="btn btn-sm btn-light btn-icon"
+												data-tippy-content="Consulter"
+												id="show"
+											>
+												<i class="bx bx-link-external"></i>
+											</button>
+											<button
+												class="btn btn-sm btn-light btn-icon"
+												data-tippy-content="Modifier"
+											>
+												<i class="bx bx-edit-alt"></i>
+											</button>
+											<button
+												class="btn btn-sm btn-light btn-icon"
+												data-tippy-content="Supprimer"
+												id="delete"
+											>
+												<i class="bx bx-trash"></i>
+											</button>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<!-- Pagination -->
+
+					<div style="margin-top: 1.5rem; padding: 0 2rem">
+						<nav class="pagination">
+							<a class="pagination-item" href="#">
+								<i class="bx bxs-chevron-left"></i>
+							</a>
+							<a class="pagination-item" href="#">1</a>
+							<a class="pagination-item" href="#">2</a>
+							<a class="pagination-item active" href="#">3</a>
+							<a class="pagination-item" href="#">4</a>
+							<a class="pagination-item" href="#">5</a>
+							<a class="pagination-item" href="#">
+								<i class="bx bxs-chevron-right"></i>
+							</a>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Backdrop -->
+		<div class="backdrop" id="backdrop"></div>
+
+		<!-- Offcanvas -->
+		<div class="offcanvas" id="offcanvas">
+			<div class="header">
+				<div class="avatar-container">
+					<img
+						class="avatar"
+						src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60"
+						alt="..."
+					/>
+				</div>
+			</div>
+			<div class="content">
+				<h4 class="name">Jane Cooper</h4>
+				<span class="email">jane.cooper@example.com</span>
+
+				<div class="infos">
+					<table>
+						<tr>
+							<td>Description</td>
+							<td>
+								Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+								Nesciunt, quisquam labore porro soluta distinctio cupidit.
+							</td>
+						</tr>
+						<tr>
+							<td>Téléphone</td>
+							<td>(541) 754-3010</td>
+						</tr>
+						<tr>
+							<td>Poste</td>
+							<td>Regional Paradigm Technician</td>
+						</tr>
+						<tr>
+							<td>Numéro de securité social</td>
+							<td>123456789</td>
+						</tr>
+						<tr>
+							<td>Teste</td>
+							<td>123456789</td>
+						</tr>
+						<tr>
+							<td>Teste</td>
+							<td>123456789</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<button class="btn btn-light btn-icon close" id="close">
+				<i class="bx bx-x" style="font-size: 1.7rem"></i>
+			</button>
+		</div>
+
+		<!-- Modal -->
+		<div class="modal" id="modal">
+			<div class="content">
+				<span class="icon">
+					<i class="bx bx-meh"></i>
+				</span>
+				<div class="text">
+					<h1>Supprimer un employé</h1>
+					<p>
+						Voulez-vous vraiment supprimer cet employé ? Toutes les données des
+						employés seront définitivement supprimées. Cette action ne peut pas
+						être annulée.
+					</p>
+				</div>
+			</div>
+			<div class="footer">
+				<button class="btn btn-outline">Annuler</button>
+				<button class="btn btn-danger">Supprimer</button>
+			</div>
+		</div>
+
+		<script>
+			const toggler = document.querySelector('.toggler');
+			const sidebar = document.querySelector('.sidebar');
+			const userButton = document.querySelector('.sidebar__user');
+
+			// toggle sidebar
+			toggler.addEventListener('click', () => {
+				sidebar.classList.toggle('open');
+			});
+
+			// show tooltips
+			tippy('[data-tippy-content]', {
+				placement: 'right',
+				arrow: false,
+				animation: 'fade',
+			});
+			tippy('[data-tippy-bottom]', { placement: 'bottom', arrow: false });
+
+			// show dropdown
+			tippy(userButton, {
+				content: 'Dropdown menu',
+				placement: 'right',
+				arrow: false,
+				animation: 'fade',
+				trigger: 'click',
+			});
+
+			// show & hide canvas
+			const backdrop = document.querySelector('#backdrop');
+			const offcanvas = document.querySelector('#offcanvas');
+			const closeButton = document.querySelector('#close');
+			const showButtons = document.querySelectorAll('#show');
+
+			for (const showButton of showButtons) {
+				showButton.addEventListener('click', () => {
+					backdrop.classList.add('open');
+					offcanvas.classList.add('open');
+				});
+			}
+
+			closeButton.addEventListener('click', () => {
+				backdrop.classList.remove('open');
+				offcanvas.classList.remove('open');
+			});
+
+			// show & hide modal
+			const modal = document.querySelector('#modal');
+			const deleteButtons = document.querySelectorAll('#delete');
+
+			for (const deleteButton of deleteButtons) {
+				deleteButton.addEventListener('click', () => {
+					backdrop.classList.add('open');
+					modal.classList.add('open');
+				});
+			}
+
+			backdrop.addEventListener('click', () => {
+				backdrop.classList.remove('open');
+				offcanvas.classList.remove('open');
+				modal.classList.remove('open');
+			});
+		</script>
+	</body>
+</html>
