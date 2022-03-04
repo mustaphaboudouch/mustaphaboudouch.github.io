@@ -1160,6 +1160,7 @@ video {
   gap: 0.5rem;
   background-color: #fef2f2;
   padding: 1rem 1.5rem;
+  border-radius: 0 0 0.5rem 0.5rem;
 }
 .modal.open {
   transform: translate(-50%, -50%) scale(1);
