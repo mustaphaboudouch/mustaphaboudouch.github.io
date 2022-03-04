@@ -191,7 +191,7 @@ body {
 /* Toggler */
 
 .sidebar.open .toggler i {
-	transform: rotate(0deg);
+	transform: rotate(180deg);
 }
 
 /**********************************
@@ -222,7 +222,7 @@ body {
 
 .toggler i {
 	opacity: 0.8;
-	transform: rotate(180deg);
+	transform: rotate(0deg);
 	transition: transform 0.3s;
 }
 
