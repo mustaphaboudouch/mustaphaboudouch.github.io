@@ -1124,6 +1124,7 @@ video {
   opacity: 0;
   visibility: hidden;
   transition: none;
+  overflow: hidden;
 }
 .modal .content {
   display: flex;
